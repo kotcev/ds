@@ -1,15 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lyuboslav.kotsev
- * Date: 18.9.2018 г.
- * Time: 15:52
- */
 
 namespace DS\LinkedList;
 
 
 class Node
 {
+
+    private $data;
+
+    public $next;
+
+    public function __construct($data, $next)
+    {
+        $this->data = $data;
+        $this->next = $next;
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
 
 }

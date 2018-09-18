@@ -1,7 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lyuboslav.kotsev
- * Date: 18.9.2018 г.
- * Time: 16:49
- */
+
+require 'vendor/autoload.php';
+
+$linkedList = new \DS\LinkedList\LinkedList();
+
+for ($i = 0; $i < 10; $i++) {
+    $linkedList->push($i);
+}
+
+$linkedList->delete(5);
+
+echo '<pre>';
+print_r($linkedList);

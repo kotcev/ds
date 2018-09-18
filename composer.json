@@ -1,0 +1,17 @@
+{
+    "name": "lyuboslav.kotsev/ds",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lyuboslav Kotsev",
+            "email": "liumbiwe@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DS\\": "src/"
+        }
+    }
+}
