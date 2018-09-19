@@ -7,30 +7,24 @@ class DoublyLinkedList
 {
     use LinkedListTrait;
 
-    public function insertBefore()
+    /**
+     * Pushes element at the end of the list.
+     * @param $data
+     */
+    public function push($data)
     {
+        $current = $this->createNode($data);
 
+        if ( ! $this->length) {
+            $this->firstNode = $current;
+            $this->lastNode = $current;
+        } else {
+            $current->prev = $this->lastNode;
+            $this->lastNode->next = $current;
+            $this->lastNode = $current;
+        }
+
+        $this->length++;
     }
-
-    public function insertAfter()
-    {
-
-    }
-
-    public function search()
-    {
-
-    }
-
-    public function remove()
-    {
-
-    }
-
-    public function display()
-    {
-
-    }
-
 
 }
