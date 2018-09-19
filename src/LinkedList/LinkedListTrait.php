@@ -1,15 +1,31 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lyuboslav.kotsev
- * Date: 19.9.2018 г.
- * Time: 15:19
- */
 
 namespace DS\LinkedList;
 
 
 trait LinkedListTrait
 {
+
+    /**
+     * @var Node
+     */
+    private $firstNode;
+
+    /**
+     * @var Node
+     */
+    private $lastNode;
+
+    /**
+     * @var int
+     */
+    private $length;
+
+    public function __construct()
+    {
+        $this->firstNode = NULL;
+        $this->lastNode = NULL;
+        $this->length = 0;
+    }
 
 }
