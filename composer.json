@@ -11,7 +11,11 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "DS\\": "src/"
+            "DS\\": "src/",
+            "Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.3"
     }
 }

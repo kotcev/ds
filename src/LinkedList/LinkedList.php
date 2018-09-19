@@ -62,11 +62,11 @@ class LinkedList
         $current = new Node($data, NULL);
 
         if ( ! $this->length) {
-            $this->firstNode = &$current;
-            $this->lastNode = &$current;
+            $this->firstNode = $current;
+            $this->lastNode = $current;
         } else {
-            $this->lastNode->next = &$current;
-            $this->lastNode = &$current;
+            $this->lastNode->next = $current;
+            $this->lastNode = $current;
         }
 
         $this->length++;
@@ -93,10 +93,12 @@ class LinkedList
     }
 
     /**
+     * Big O notation: O(n)
+     *
      * @param $search
      * @return bool
      */
-    public function delete($search)
+    public function remove($search)
     {
         $current = $this->firstNode;
         $lastIterationNode = $this->firstNode;
@@ -115,6 +117,10 @@ class LinkedList
         }
 
         if ($found) {
+            if ($found === $this->lastNode) {
+                $this->lastNode = $lastIterationNode;
+            }
+
             $lastIterationNode->next = $found->next;
             $this->length--;
             return true;
@@ -142,6 +148,24 @@ class LinkedList
         }
 
         return NULL;
+    }
+
+    /**
+     * Basically converts the list to php-array.
+     *
+     * @return array
+     */
+    public function display()
+    {
+        $list = array();
+        $current = $this->firstNode;
+
+        for ($i = 0; $i < $this->length; $i++) {
+            $list[] = $current->getData();
+            $current = $current->next;
+        }
+
+        return $list;
     }
 
 }
