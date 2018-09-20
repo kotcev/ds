@@ -66,7 +66,7 @@ class Stack
      */
     public function peek()
     {
-        return $this->stack[$this->count - 1];
+        return $this->stack->offsetGet($this->count - 1);
     }
 
     /**
