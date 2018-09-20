@@ -8,6 +8,7 @@ class LinkedList
     use LinkedListTrait;
 
     /**
+     * Adds new element at the end of the list.
      * Complexity: O(1)
      *
      * @param $data
@@ -28,7 +29,8 @@ class LinkedList
     }
 
     /**
-     * Big O notation: O(n)
+     * Inserts new element after the given index.
+     * Complexity: O(n)
      *
      * @param $search
      * @param $data

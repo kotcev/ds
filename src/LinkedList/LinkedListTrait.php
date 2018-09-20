@@ -6,12 +6,12 @@ namespace DS\LinkedList;
 trait LinkedListTrait
 {
     /**
-     * @var Node
+     * @var Node|DoublyLinkedListNode
      */
     private $firstNode;
 
     /**
-     * @var Node
+     * @var Node|DoublyLinkedListNode
      */
     private $lastNode;
 
@@ -28,7 +28,7 @@ trait LinkedListTrait
     }
 
     /**
-     * @return Node|null
+     * @return Node|DoublyLinkedListNode|null
      */
     public function getFirstNode()
     {
@@ -36,7 +36,7 @@ trait LinkedListTrait
     }
 
     /**
-     * @return Node|null
+     * @return Node|DoublyLinkedListNode|null
      */
     public function getLastNode()
     {
@@ -53,6 +53,7 @@ trait LinkedListTrait
 
     /**
      * Displays the list data as php-array.
+     * Complexity: O(n)
      *
      * @return array
      */
@@ -70,7 +71,8 @@ trait LinkedListTrait
     }
 
     /**
-     * Big O notation: O(n)
+     * Searches for a given value.
+     * Complexity: O(n)
      *
      * @param $search
      * @return Node|DoublyLinkedListNode|null
@@ -91,7 +93,8 @@ trait LinkedListTrait
     }
 
     /**
-     * Big O notation: O(n)
+     * Deletes element from the list.
+     * Complexity: O(n)
      *
      * @param $search
      * @return bool
@@ -128,6 +131,8 @@ trait LinkedListTrait
     }
 
     /**
+     * Creates a new node.
+     *
      * @param $data
      * @param null $next
      * @return DoublyLinkedListNode|Node

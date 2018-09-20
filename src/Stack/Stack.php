@@ -27,6 +27,9 @@ class Stack
     }
 
     /**
+     * Push new element at the top of the stack.
+     * Complexity: O(1)
+     *
      * @param $data
      */
     public function push($data)
@@ -37,6 +40,9 @@ class Stack
     }
 
     /**
+     * Get and remove the last element.
+     * Complexity: O(1)
+     *
      * @return mixed
      */
     public function pop()
@@ -54,6 +60,9 @@ class Stack
 
     /**
      * Get the last element without removing it.
+     * Complexity: O(1)
+     *
+     * @return mixed
      */
     public function peek()
     {

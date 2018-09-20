@@ -9,6 +9,8 @@ class DoublyLinkedList
 
     /**
      * Pushes element at the end of the list.
+     * Complexity: O(1)
+     *
      * @param $data
      */
     public function push($data)
