@@ -73,7 +73,7 @@ class Queue
      */
     public function length()
     {
-        return $this->count + 1;
+        return $this->count;
     }
 
 }
